@@ -192,4 +192,4 @@
 
 /*** Adds multiple items to cart : END ***/
 
-
+/** Persist cart info across pages **/
