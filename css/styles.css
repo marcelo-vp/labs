@@ -194,9 +194,92 @@ header {
 .qty-buttons .icon {
   height: 100%; }
 
+/** Luiza Cred cards **/
+.cards-intro {
+  background-color: #0083ca;
+  /*Option with display: inline-block*/
+  /*Option with float: left
+  .cards-wrapper {
+    background-color: #80CBC4;
+    position: relative;
+    width: 100%;
+    height: 196px;
+    .card-container {
+      float: left;
+      width: 50%;
+      position: absolute;
+      top: 80px;
+      z-index: 20;
+      img {
+        width: 100%;
+        max-width: 250px;
+      }
+    }
+    .golden-card {
+      left: 0;
+      padding: 0 15px 0 40px;
+      img {
+        float: right;
+      }
+    }
+    .silver-card {
+      right: 0;
+      padding: 0 40px 0 15px;
+      img {
+        float: left;
+      }
+    }
+  }*/ }
+  .cards-intro .intro-text {
+    padding: 10px 0; }
+    .cards-intro .intro-text p {
+      font-size: 22px;
+      color: #fff; }
+  .cards-intro .cards-wrapper {
+    background-color: #80CBC4;
+    position: relative;
+    width: 100%;
+    height: 196px; }
+    .cards-intro .cards-wrapper .card-container {
+      display: inline-block;
+      width: 50%;
+      position: absolute;
+      top: 80px;
+      z-index: 20; }
+      .cards-intro .cards-wrapper .card-container img {
+        width: 100%;
+        max-width: 250px; }
+    .cards-intro .cards-wrapper .golden-card {
+      left: 0;
+      padding: 0 14px 0 40px; }
+      .cards-intro .cards-wrapper .golden-card img {
+        float: right; }
+    .cards-intro .cards-wrapper .silver-card {
+      right: 0;
+      padding: 0 40px 0 14px; }
+      .cards-intro .cards-wrapper .silver-card img {
+        float: left; }
+
+.discount-info {
+  background-color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 36px;
+  line-height: 2.0;
+  padding: 40px 100px;
+  position: relative; }
+  .discount-info span {
+    color: #0083ca; }
+    .discount-info span.bold {
+      font-weight: bold; }
+  .discount-info .coupon-info {
+    display: none; }
+  .discount-info #coupon-toggle {
+    cursor: pointer; }
+
 /** Footer **/
 footer {
-  padding: 15px 0;
+  padding: 150px 0;
   background-color: #F57C00; }
 
 footer h1 {

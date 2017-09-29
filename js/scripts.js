@@ -193,3 +193,12 @@
 /*** Adds multiple items to cart : END ***/
 
 
+/*** Show and hide with animate : BEGIN ***/
+
+var couponButton = document.querySelector('#coupon-toggle');
+// When clicking the couponButton, toggle the coupon info visibility
+couponButton.addEventListener('click', function(e) {
+  $('.coupon-info').slideToggle();
+});
+
+/*** Show and hide with animate : END ***/
