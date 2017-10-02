@@ -1,5 +1,23 @@
 /*** CODE PLAYGROUND STYLESHEET ***/
 
+/** SASS Features application **/
+// Colors
+$base-color: #0083ca;
+$header-bgd: lighten($base-color,25%);
+$footer-bgd: darken($base-color,30%);
+$complement: complement($base-color);
+// Functions
+  // Function to convert pixels to percentages
+  @function px-to-pct($target, $context: 1200px) {
+    @return ($target/$context)*100;
+  }
+  // Function to determine items' width considering gutter value
+  @function item-width($items) {
+    $g-pct: px-to-pct($gutter)*2;
+    $g-total: $items*$g-pct;
+    @return (100%/$items) - $g-total;
+  }
+
 /** Overall styles **/
 body {
   background-color: #fafafa;
@@ -76,6 +94,7 @@ input[type=number] {
 /** Header **/
 header {
   padding: 20px 0 60px;
+  background-color: $header-bgd;
 }
 #page-title {
   float: left;
@@ -129,7 +148,7 @@ header {
   transition: 0.3s ease;
 }
 #cart-reset:hover {
-  background-color: rgba(0,0,0,0.75);
+  background-color: $complement;
   color: #fafafa;  
 }
 
@@ -171,6 +190,9 @@ header {
   border: none;
   background-color: #E65100;
   color: #fafafa;
+  &:hover {
+    background-color: rgba($complement, 0.9);
+  }
 }
 .qty-value, .qty-buttons {
   float: left;
@@ -302,9 +324,9 @@ header {
 /** Footer **/
 footer {
   padding: 150px 0;
-  background-color: #F57C00;
+  background-color: $footer-bgd;
 }
 footer h1 {
   margin: 0;
-  color: #000;
+  color: #FFF;
 }
