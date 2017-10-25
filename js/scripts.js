@@ -202,3 +202,6 @@ couponButton.addEventListener('click', function(e) {
 });
 
 /*** Show and hide with animate : END ***/
+
+
+/** Persist cart info across pages **/
