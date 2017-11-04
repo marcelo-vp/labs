@@ -6,8 +6,59 @@
   display: block;
   margin: 0 auto;
 }
-@mixin breakpoint {
-  @content;
+@mixin responsive ($max-width, $margin) {
+  max-width: $max-width;
+  margin: $margin;
+}
+// MQ mixin
+@mixin media-query ($breakpoint) {
+  @if ($breakpoint == 'xs') {
+    @media screen and (max-width: 425px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == 'sm') {
+    @media screen and (min-width: 426px) {
+      @content;
+    }
+  }
+  @else if ($breakpoint == 'md') {
+    @media screen and (min-width: 769px) {
+      @content;
+    }
+  }
+  @else if ($breakpoint == 'lg') {
+    @media screen and (min-width: 1025px) {
+      @content;
+    }
+  }
+  @else if ($breakpoint == 'xl') {
+    @media screen and (min-width: 1441px) {
+      @content;
+    }
+  }
+}
+// Same MQ mixin usings maps
+$breakpointList: (
+  'xs': 425px,
+  'sm': 426px,
+  'md': 769px,
+  'lg': 1025px,
+  'xl': 1441px
+);
+@mixin media-query ($breakpoint) {
+  $value: map-get($breakpointList, $breakpoint);
+  $sm: map-get($breakpointList, 'sm');
+  @if ($value < $sm) {
+    @media screen and (max-width: $value) {
+      @content;
+    }
+  }
+  @else {
+    @media screen and (min-width: $value) {
+      @content;
+    }
+  }
 }
 // Extends
 .navigation {
