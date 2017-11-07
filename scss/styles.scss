@@ -60,6 +60,19 @@ $breakpointList: (
     }
   }
 }
+// Loops
+@for $i from 1 through 10 {
+  .button-#{$i} {
+    background-color: adjust-hue(blue, $i*20);
+  }
+}
+// List of products
+$products: ('goggles','cap','fins','speedo','hand-paddle');
+@each $product in $products {
+  .#{$product}-image {
+    background-image: url('img/#{$product}-bgd.jpg');
+  }
+}
 // Extends
 .navigation {
   width: 100%;
