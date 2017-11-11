@@ -73,6 +73,27 @@ $products: ('goggles','cap','fins','speedo','hand-paddle');
     background-image: url('img/#{$product}-bgd.jpg');
   }
 }
+// Custom icon colors for products using maps and each
+  // Creating a color map with a list of products
+  $iconColors : (
+    'goggles': '#79ccf5',
+    'cap': '#fd6fa6',
+    'fins': '#23bbae',
+    'speedo': '2377bb',
+    'hand-paddle':'ada3f0'
+  );
+  // Including the loop in a mixin
+  @mixin icon-colors ($map) {
+    @each $prod, $color in $map {
+      &-#{$prod} {
+        color: $color;
+      }
+    }
+  }
+  // Use the mixin to create a .icn-$prod list of classes
+  .icn {
+    @include icon-colors($iconColors);
+  }
 // Extends
 .navigation {
   width: 100%;
