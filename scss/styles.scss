@@ -73,8 +73,8 @@ $products: ('goggles','cap','fins','speedo','hand-paddle');
     background-image: url('img/#{$product}-bgd.jpg');
   }
 }
-// Custom icon colors for products using maps and each
-  // Creating a color map with a list of products
+// Custom icon colors using maps and each
+  // Creating a color map for a list of products
   $iconColors : (
     'goggles': '#79ccf5',
     'cap': '#fd6fa6',
