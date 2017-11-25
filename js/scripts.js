@@ -81,7 +81,7 @@
 
   // Gets cart information on page load
     // When the DOM is fully loaded
-    document.addEventListener('DOMContentLoaded', (e) => {
+/*     document.addEventListener('DOMContentLoaded', (e) => {
       // Retrieves cart info via Ajax
         // Create new XML Http request object
         let getCart = new XMLHttpRequest();
@@ -98,7 +98,7 @@
         getCart.open('GET','data/user_info.json');
         // Send the request
         getCart.send();
-    });
+    }); */
 
   // Sets quantity by clicking the up and down buttons
     // When clicking the increase quantity button
@@ -204,4 +204,42 @@
 /*** Show and hide with animate : END ***/
 
 
-/** Persist cart info across pages **/
+/*** Creating custom objects : BEGIN ***/
+
+  // Creating an unique car object, with properties and methods
+  var vwFox = {
+    brand: 'Volkswagen',
+    model: 'Fox',
+    color: 'silver',
+    start: function () {
+      console.log(this.brand + ' ' + this.model + ' engine is on!');
+    },
+    drive: function () {
+      console.log('Enjoy the ride on the new ' + this.brand + ' ' + this.model + '!');
+    },
+    stop: function () {
+      console.log(this.brand + ' ' + this.model + ' has just stopped.');
+    }
+  }
+
+	// Creating a car object constructor
+	var car = function (brand, model, color) {
+		this.brand = brand;
+		this.model = model;
+		this.color = color;
+		this.start = function () {
+			console.log(brand + ' ' + model + ' engine is on!');
+		}
+		this.drive = function () {
+			console.log('Enjoy the ride, we are moving!');
+		}
+		this.stop = function () {
+			console.log('Reached our destination. Engine off..');
+		}
+	}
+
+	// Creating instances of the car object
+	var Peugeot = new car ('Peugeot','208','white');
+	var Fiesta = new car ('Fiesta','hatch','blue');
+
+/*** Creating custom objects : END ***/
