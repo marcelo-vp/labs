@@ -223,7 +223,7 @@
   }
 
 	// Creating a car object constructor
-	var car = function (brand, model, color) {
+	function Car (brand, model, color) {
 		this.brand = brand;
 		this.model = model;
 		this.color = color;
@@ -239,7 +239,7 @@
 	}
 
 	// Creating instances of the car object
-	var Peugeot = new car ('Peugeot','208','white');
-	var Fiesta = new car ('Fiesta','hatch','blue');
+	var Peugeot = new Car ('Peugeot','208','white');
+	var Fiesta = new Car ('Fiesta','hatch','blue');
 
 /*** Creating custom objects : END ***/
