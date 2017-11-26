@@ -240,6 +240,25 @@
 
 	// Creating instances of the car object
 	var Peugeot = new Car ('Peugeot','208','white');
-	var Fiesta = new Car ('Fiesta','hatch','blue');
+  var Fiesta = new Car ('Fiesta','hatch','blue');
+  
+  // Creating a computer object constructor
+  function Computer (brand, model, processor, ram, storage, display) {
+    this.brand = brand;
+    this.model = model;
+    this.processor = processor;
+    this.ram = ram;
+    this.storage = storage;
+    this.display = display;
+  }
+  // Creating objects prototypes for methods shared among instances
+  Computer.prototype.turnOn = function (brand, model) {
+    console.log('The ' + this.brand + ' ' + this.model + ' has just been turned on!');
+  }
+  Computer.prototype.turnOff = function (brand, model) {
+    console.log('The ' + this.brand + ' ' + this.model + ' has just been turned off!');
+  }
+  // Creating instances of computers
+  var lenovoTC = new Computer ('Lenovo','Thinkcentre Edge','Intel i5 2,8Ghz','8GB','250GB','22"');
 
 /*** Creating custom objects : END ***/
