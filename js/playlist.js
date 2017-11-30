@@ -1,18 +1,18 @@
 // Creating a song constructor object
 function Song (title, artist, duration) {
-    this.title = title;
+    Media.call(this, title, duration);
     this.artist = artist;
-    this.duration = duration;
-    this.isPlaying = false;
 }
 
-Song.prototype.play = function () {
-    this.isPlaying = true;
+Song.prototype = Object.create(Media.prototype);
+
+// Creating a movie constructor object
+function Movie (title, year, duration) {
+    Media.call(this, title, duration);
+    this.year = year;
 }
 
-Song.prototype.stop = function () {
-    this.isPlaying = false;
-}
+Movie.prototype = Object.create(Media.prototype);
 
 // Creating a playlist constructor object
 function Playlist () {
@@ -55,3 +55,9 @@ var starLight = new Song ('Starlight','Muse','4:52');
 playlist.add(aQuestionOfHeaven);
 playlist.add(spaceMan);
 playlist.add(starLight);
+
+// Creating our movies
+var spiderman = new Movie('Spiderman 3','2016','3:20');
+
+// Adding movies to the playlist
+playlist.add(spiderman);
