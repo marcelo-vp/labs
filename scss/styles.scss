@@ -437,6 +437,20 @@ header {
   }
 }
 
+/** Full BGs **/
+.full-bg {
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+.las-vegas {
+  background-image: url('../img/las-vegas.jpg');
+  height: 2000px;
+}
+.las-vegas-wide {
+  background-image: url('../img/las-vegas-panoramic.jpg');
+  height: 342px;
+}
+
 /** Footer **/
 footer {
   padding: 150px 0;
