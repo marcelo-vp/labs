@@ -261,5 +261,6 @@
   // Creating instances of computers
   var lenovoTC = new Computer ('Lenovo','Thinkcentre Edge','Intel i5 2,8Ghz','8GB','250GB','22"');
   var acerAspireS7 = new Computer('Acer','Aspire S7','Intel i7 3,2Ghz','6GB','320GB','17" widescreen');
+  var macBookAir = new Computer( 'Apple', 'Macbook Air', 'Intel i5', '128GB', '15"' );
 
 /*** Creating custom objects : END ***/
